@@ -1,6 +1,9 @@
 This directory contains two examples of instances for the host language.
 
-To define a new instance
+To build and test the corresponding language, just `cd` to the associated directory (`./int` or
+`./bool`) and type `make; make test`.
+
+To define a new target language (instance)
 
 1. Make sure the `host` library is available (`cd ../host/lib; make`)
 2. Make a copy of the - say - `int` directory and rename it (`foo` for example)

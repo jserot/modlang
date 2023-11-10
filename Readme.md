@@ -6,7 +6,7 @@ giving several _instances_ `L(X)`.
 
 As an illustration, consider a language `L1` describing a very simple calculator. Programs in this language are
 sequences of _statements_, where a statement is either
-- expressions to computed and displayed
+- an expression to computed and displayed
 - assignation of a expression value to a _variable_
 
 For example, if expressions denote integers and basic arithmeric operations on integers, execution of the following program
@@ -90,8 +90,8 @@ where
 When a language `T` can be defined as `T=H(G)` we say that `H` is the _host_ language and `G` the
 _guest_ language. 
 
-This project proposes a general framework for implementing this idea using OCaml parameterized
-modules (aka functors). This framework is built upon 
+This project proposes a general framework for implementing this idea using OCaml _parameterized
+modules_ (aka _functors_). This framework is built upon 
 a library (in `./host/lib`) describing the syntax and semantics of the host language `L` and providing the
 infrastructure for building a command-line compiler for the target language.
 
