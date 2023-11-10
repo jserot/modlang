@@ -1,0 +1,4 @@
+(library
+  (flags (:standard -annot) (:standard -w -27))
+  (libraries host) 
+  (name guest_int))

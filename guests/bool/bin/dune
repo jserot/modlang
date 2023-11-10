@@ -1,0 +1,17 @@
+(executable
+  (modes byte)
+  (libraries host guest_bool)
+  (name main))
+
+(ocamllex
+  (modules lexer))
+
+(rule
+ (target lexer.mll)
+ (deps (:first-dep ../../../host/lib/lexer.cppo.mll) guest_kw.mll guest_rules.mll)
+ (action (run cppo -n -I . %{first-dep} -o %{target})))
+
+(menhir
+  (modules ../../../host/lib/host_parser guest_parser)
+  (merge_into parser)
+  (flags --unused-tokens --unused-precedence-levels))

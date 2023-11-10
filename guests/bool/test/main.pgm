@@ -1,0 +1,4 @@
+x=false
+!x
+y=x and !x
+y
